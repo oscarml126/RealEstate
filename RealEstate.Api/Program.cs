@@ -1,41 +1,60 @@
+using MongoDB.Driver;
+using RealEstate.Application.Abstractions;
+using RealEstate.Infrastructure.Configuration;
+using RealEstate.Infrastructure.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
-builder.Services.AddOpenApi();
+// Swagger + Controllers
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddControllers();
+
+// CORS para desarrollo
+builder.Services.AddCors(o =>
+{
+    o.AddDefaultPolicy(p => p
+        .AllowAnyHeader()
+        .AllowAnyMethod()
+        .AllowAnyOrigin());
+});
+
+// Mongo settings
+builder.Services.Configure<MongoSettings>(builder.Configuration.GetSection("Mongo"));
+
+builder.Services.AddSingleton<IMongoClient>(sp =>
+{
+    var cfg = sp.GetRequiredService<Microsoft.Extensions.Options.IOptions<MongoSettings>>().Value;
+    var url = new MongoUrlBuilder(cfg.ConnectionString)
+    {
+        MinConnectionPoolSize = cfg.MinPoolSize,
+        MaxConnectionPoolSize = cfg.MaxPoolSize
+    }.ToMongoUrl();
+
+    var settings = MongoClientSettings.FromUrl(url);
+    settings.ServerApi = new ServerApi(ServerApiVersion.V1);
+    settings.SocketTimeout = TimeSpan.FromMilliseconds(cfg.SocketTimeoutMs);
+    settings.ServerSelectionTimeout = TimeSpan.FromMilliseconds(cfg.ServerSelectionTimeoutMs);
+    settings.RetryWrites = true;
+
+    return new MongoClient(settings);
+});
+
+builder.Services.AddSingleton<IMongoDatabase>(sp =>
+{
+    var cfg = sp.GetRequiredService<Microsoft.Extensions.Options.IOptions<MongoSettings>>().Value;
+    var client = sp.GetRequiredService<IMongoClient>();
+    return client.GetDatabase(cfg.DatabaseName);
+});
+
+builder.Services.AddSingleton<IPropertyRepository, PropertyRepository>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
 
-app.UseHttpsRedirection();
-
-var summaries = new[]
-{
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
+app.UseCors();
+app.MapControllers();
 
 app.Run();
-
-record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-}

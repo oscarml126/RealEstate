@@ -1,0 +1,12 @@
+c:\Users\OscarML126\Downloads\banco\prueba tecnica\RealEstate\RealEstate.Application\bin\Debug\net9.0\RealEstate.Application.deps.json
+C:\Users\OscarML126\Downloads\banco\prueba tecnica\RealEstate\RealEstate.Application\bin\Debug\net9.0\RealEstate.Application.dll
+C:\Users\OscarML126\Downloads\banco\prueba tecnica\RealEstate\RealEstate.Application\bin\Debug\net9.0\RealEstate.Application.pdb
+C:\Users\OscarML126\Downloads\banco\prueba tecnica\RealEstate\RealEstate.Application\obj\Debug\net9.0\RealEstate.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\OscarML126\Downloads\banco\prueba tecnica\RealEstate\RealEstate.Application\obj\Debug\net9.0\RealEstate.Application.AssemblyInfoInputs.cache
+C:\Users\OscarML126\Downloads\banco\prueba tecnica\RealEstate\RealEstate.Application\obj\Debug\net9.0\RealEstate.Application.AssemblyInfo.cs
+C:\Users\OscarML126\Downloads\banco\prueba tecnica\RealEstate\RealEstate.Application\obj\Debug\net9.0\RealEstate.Application.csproj.CoreCompileInputs.cache
+C:\Users\OscarML126\Downloads\banco\prueba tecnica\RealEstate\RealEstate.Application\obj\Debug\net9.0\RealEstate.Application.sourcelink.json
+C:\Users\OscarML126\Downloads\banco\prueba tecnica\RealEstate\RealEstate.Application\obj\Debug\net9.0\RealEstate.Application.dll
+C:\Users\OscarML126\Downloads\banco\prueba tecnica\RealEstate\RealEstate.Application\obj\Debug\net9.0\refint\RealEstate.Application.dll
+C:\Users\OscarML126\Downloads\banco\prueba tecnica\RealEstate\RealEstate.Application\obj\Debug\net9.0\RealEstate.Application.pdb
+c:\Users\OscarML126\Downloads\banco\prueba tecnica\RealEstate\RealEstate.Application\obj\Debug\net9.0\ref\RealEstate.Application.dll

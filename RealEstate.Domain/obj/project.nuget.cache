@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "P0JKi3ZdOrM=",
+  "dgSpecHash": "9PB5gaxZBd4=",
   "success": true,
   "projectFilePath": "C:\\Users\\OscarML126\\Downloads\\banco\\prueba tecnica\\RealEstate\\RealEstate.Domain\\RealEstate.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\OscarML126\\.nuget\\packages\\mongodb.bson\\2.25.0\\mongodb.bson.2.25.0.nupkg.sha512",
+    "C:\\Users\\OscarML126\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\OscarML126\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

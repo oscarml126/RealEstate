@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\OscarML126\\Downloads\\banco\\prueba tecnica\\RealEstate\\RealEstate.Application\\RealEstate.Application.csproj",
+      "projectUniqueName": "c:\\Users\\OscarML126\\Downloads\\banco\\prueba tecnica\\RealEstate\\RealEstate.Application\\RealEstate.Application.csproj",
       "projectName": "RealEstate.Application",
-      "projectPath": "C:\\Users\\OscarML126\\Downloads\\banco\\prueba tecnica\\RealEstate\\RealEstate.Application\\RealEstate.Application.csproj",
+      "projectPath": "c:\\Users\\OscarML126\\Downloads\\banco\\prueba tecnica\\RealEstate\\RealEstate.Application\\RealEstate.Application.csproj",
       "packagesPath": "C:\\Users\\OscarML126\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\OscarML126\\Downloads\\banco\\prueba tecnica\\RealEstate\\RealEstate.Application\\obj\\",
+      "outputPath": "c:\\Users\\OscarML126\\Downloads\\banco\\prueba tecnica\\RealEstate\\RealEstate.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
