@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "h5yNFe6og3w=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\OscarML126\\Downloads\\banco\\prueba tecnica\\RealEstate\\RealEstate.Api\\RealEstate.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\OscarML126\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.8\\microsoft.aspnetcore.openapi.9.0.8.nupkg.sha512",
+    "C:\\Users\\OscarML126\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
